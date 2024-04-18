@@ -2,7 +2,7 @@ import { inject, resolve, newInstanceOf, newInstanceForScope } from 'aurelia'
 import { INavigationModel, IRouteContext } from '@aurelia/router-lite'
 
 
-// @inject( IRouteContext )
+@inject( IRouteContext )
 export class NavBar {
   navModel = null
 
@@ -11,9 +11,9 @@ export class NavBar {
 
   /* Using `@inject` or `static inject`; neither of them work */
 
-  // constructor(routeCtx) {
-  //   this.navModel = routeCtx.navigationModel
-  // }
+  constructor(routeCtx) {
+    this.navModel = routeCtx.navigationModel
+  }
 
 
   /* Using `resolve`; none of these work either */
