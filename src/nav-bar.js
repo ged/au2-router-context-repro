@@ -9,14 +9,15 @@ export class NavBar {
   // static inject = [ IRouteContext ]
 
 
-  /* Using `@inject` or `static inject`; neither of them work */
+  /* Attempt 1 & 2: Using `@inject` or `static inject`; neither of them work */
 
   constructor(routeCtx) {
     this.navModel = routeCtx.navigationModel
   }
 
 
-  /* Using `resolve`; none of these work either */
+  /* Attempt 3, 4, adn 5: Using `resolve` after commenting out the `@inject`
+     above; none of these work either */
 
   // constructor() {
     // this.navModel = resolve(IRouteContext).navigationModel
